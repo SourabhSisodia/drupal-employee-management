@@ -1,0 +1,72 @@
+uuid: 927ed67f-86e1-4e24-9c2e-603224d7aeeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.projects.field_customer_name
+    - field.field.taxonomy_term.projects.field_project_image
+    - field.field.taxonomy_term.projects.field_project_name
+    - field.field.taxonomy_term.projects.field_project_team
+    - field.field.taxonomy_term.projects.field_start_date
+    - taxonomy.vocabulary.projects
+  module:
+    - datetime
+    - image
+    - text
+id: taxonomy_term.projects.default
+targetEntityType: taxonomy_term
+bundle: projects
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_customer_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_project_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_project_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_project_team:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

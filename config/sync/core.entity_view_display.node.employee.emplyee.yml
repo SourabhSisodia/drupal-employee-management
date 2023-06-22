@@ -1,0 +1,89 @@
+uuid: 807b8c33-2c6e-4487-b920-f7f9d2202623
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.emplyee
+    - field.field.node.employee.field_age
+    - field.field.node.employee.field_company_name
+    - field.field.node.employee.field_designation
+    - field.field.node.employee.field_employee_name
+    - field.field.node.employee.field_goal
+    - field.field.node.employee.field_image2
+    - field.field.node.employee.field_key_charactersistics
+    - field.field.node.employee.field_salary
+    - field.field.node.employee.field_skills
+    - image.style.large
+    - node.type.employee
+  module:
+    - ds
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      right:
+        - field_employee_name
+        - field_skills
+      left:
+        - field_image2
+id: node.employee.emplyee
+targetEntityType: node
+bundle: employee
+mode: emplyee
+content:
+  field_employee_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: right
+  field_image2:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 7
+    region: left
+  field_skills:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: right
+hidden:
+  field_age: true
+  field_company_name: true
+  field_designation: true
+  field_goal: true
+  field_key_charactersistics: true
+  field_salary: true
+  links: true

@@ -1,0 +1,23 @@
+uuid: 62c31448-fcb5-4483-9153-c2a09c9d6c6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salary
+    - node.type.employee
+id: node.employee.field_salary
+field_name: field_salary
+entity_type: node
+bundle: employee
+label: Salary
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: /Year
+field_type: integer

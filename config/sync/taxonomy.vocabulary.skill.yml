@@ -1,0 +1,8 @@
+uuid: ed166c2d-2622-40ab-9052-2ebc6fd4747a
+langcode: en
+status: true
+dependencies: {  }
+name: Skill
+vid: skill
+description: 'All the skills required'
+weight: 0

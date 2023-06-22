@@ -1,0 +1,23 @@
+uuid: 6d5ccf85-a7d4-475f-8f71-227e7fd0bc38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age
+    - node.type.employee
+id: node.employee.field_age
+field_name: field_age
+entity_type: node
+bundle: employee
+label: Age
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 18
+  max: null
+  prefix: ''
+  suffix: 'years old'
+field_type: integer

@@ -1,0 +1,116 @@
+uuid: f982979d-a286-4c19-9fab-151e93a82322
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.project
+    - field.field.taxonomy_term.projects.field_customer_name
+    - field.field.taxonomy_term.projects.field_project_image
+    - field.field.taxonomy_term.projects.field_project_name
+    - field.field.taxonomy_term.projects.field_project_team
+    - field.field.taxonomy_term.projects.field_start_date
+    - taxonomy.vocabulary.projects
+  module:
+    - datetime
+    - ds
+    - field_group
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - field_project_image
+      right:
+        - field_project_name
+        - field_project_team
+        - field_customer_name
+        - field_start_date
+  field_group:
+    group_team:
+      children: {  }
+      label: Team
+      parent_name: ''
+      region: hidden
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+        formatter: closed
+id: taxonomy_term.projects.project
+targetEntityType: taxonomy_term
+bundle: projects
+mode: project
+content:
+  field_customer_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: right
+  field_project_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: left
+  field_project_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: right
+  field_project_team:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 2
+    region: right
+  field_start_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: right
+hidden:
+  description: true

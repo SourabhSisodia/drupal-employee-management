@@ -1,0 +1,25 @@
+uuid: fb12b44d-c0d7-41e5-89f4-8741f5af90da
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.emplyee
+    - node.type.front_page
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.front_page.emplyee
+targetEntityType: node
+bundle: front_page
+mode: emplyee
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

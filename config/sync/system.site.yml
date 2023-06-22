@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: e57b1a0e-da42-4426-b948-71270184de49
+name: 'Employee Portal'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/18
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
