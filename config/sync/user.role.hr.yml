@@ -1,0 +1,27 @@
+uuid: 7ccb45be-33c8-40a1-a972-8040e067e7d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.employee
+    - taxonomy.vocabulary.projects
+    - taxonomy.vocabulary.skill
+  module:
+    - node
+    - taxonomy
+id: hr
+label: HR
+weight: 4
+is_admin: null
+permissions:
+  - 'create employee content'
+  - 'create terms in projects'
+  - 'create terms in skill'
+  - 'delete any employee content'
+  - 'delete terms in projects'
+  - 'delete terms in skill'
+  - 'edit any employee content'
+  - 'edit terms in projects'
+  - 'edit terms in skill'
+  - 'revert employee revisions'
+  - 'view employee revisions'

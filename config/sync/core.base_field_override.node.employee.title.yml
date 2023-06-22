@@ -1,0 +1,18 @@
+uuid: 74e3be37-7aad-4737-ac89-2bd9c6db7b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.employee
+id: node.employee.title
+field_name: title
+entity_type: node
+bundle: employee
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

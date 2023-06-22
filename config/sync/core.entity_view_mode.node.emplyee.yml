@@ -1,0 +1,10 @@
+uuid: cf3f5874-40a7-411a-9bbc-fc4582bc158b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.emplyee
+label: Emplyee
+targetEntityType: node
+cache: true

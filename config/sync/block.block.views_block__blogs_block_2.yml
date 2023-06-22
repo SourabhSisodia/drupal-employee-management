@@ -1,0 +1,29 @@
+uuid: 044854ea-691b-47bc-ab00-878ec7d7ab44
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blogs
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: views_block__blogs_block_2
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:blogs-block_2'
+settings:
+  id: 'views_block:blogs-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '3'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

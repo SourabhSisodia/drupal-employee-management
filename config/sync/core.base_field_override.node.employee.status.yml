@@ -1,0 +1,22 @@
+uuid: 4e5534f8-34f3-4aa0-9b10-d0eede025474
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.employee
+id: node.employee.status
+field_name: status
+entity_type: node
+bundle: employee
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

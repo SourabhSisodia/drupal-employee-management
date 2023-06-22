@@ -1,0 +1,21 @@
+uuid: a33024b7-b55e-4045-a595-50058a206994
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_charactersistics
+    - node.type.employee
+  module:
+    - text
+id: node.employee.field_key_charactersistics
+field_name: field_key_charactersistics
+entity_type: node
+bundle: employee
+label: 'Key charactersistics'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

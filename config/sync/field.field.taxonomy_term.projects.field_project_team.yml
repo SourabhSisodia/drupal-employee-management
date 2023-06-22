@@ -1,0 +1,29 @@
+uuid: 8ffd1d73-a27f-4738-86c3-18f60ce4920c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_project_team
+    - node.type.employee
+    - taxonomy.vocabulary.projects
+id: taxonomy_term.projects.field_project_team
+field_name: field_project_team
+entity_type: taxonomy_term
+bundle: projects
+label: 'Project Team'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      employee: employee
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

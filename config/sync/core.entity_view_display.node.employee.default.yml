@@ -1,0 +1,145 @@
+uuid: b5506d1d-47b1-4581-9220-eb1fd4006f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.field_age
+    - field.field.node.employee.field_company_name
+    - field.field.node.employee.field_designation
+    - field.field.node.employee.field_employee_name
+    - field.field.node.employee.field_goal
+    - field.field.node.employee.field_image2
+    - field.field.node.employee.field_key_charactersistics
+    - field.field.node.employee.field_salary
+    - field.field.node.employee.field_skills
+    - node.type.employee
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          25583bd4-8d3f-4876-aa25-8e323ca5c635:
+            uuid: 25583bd4-8d3f-4876-aa25-8e323ca5c635
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_image2'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4dd27118-017b-45a7-95e4-1ce85731e80b:
+            uuid: 4dd27118-017b-45a7-95e4-1ce85731e80b
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_skills'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          23a64aa1-7156-4d8f-afd6-b25a260d54d2:
+            uuid: 23a64aa1-7156-4d8f-afd6-b25a260d54d2
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_employee_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          8201fcc4-bdb6-4c05-bda5-66778e17f981:
+            uuid: 8201fcc4-bdb6-4c05-bda5-66778e17f981
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_designation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  field_designation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_employee_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_image2:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_skills:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  field_age: true
+  field_company_name: true
+  field_goal: true
+  field_key_charactersistics: true
+  field_salary: true
+  links: true
